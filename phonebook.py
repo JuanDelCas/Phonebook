@@ -19,14 +19,30 @@ while not(hasQuit):
     selected_option = input("What do you want to do (1-5)?")
 
     if selected_option == "2":
-        name = input("what is the contact's name?")
-        phone_number = input("what is their number?")
+        name = input("What is the contact's name?")
+        phone_number = input("What is their number?")
         phonebook[name] = phone_number
         print("Contact added succesfully!")
 
     elif selected_option == "1":
-        name = input("what contact's number would you like?")
+        name = input("What contact's number would you like?")
         print("Here's their number:", phonebook[name])
+    
+    elif selected_option == "3":
+        print("Remove Name and Number")
+        name = input("Name: ")
+        if name in phonebook:
+            del phonebook[name]
+        else:
+            print(name, "Was not found")
+    
+    elif selected_option == "4":
+        print("Lookup Number")
+        name = input("Name: ")
+        if name in phonebook:
+            print("The number is", phonebook[name])
+        else:
+            print(name, "Was not found")
 
     elif selected_option == "5":
         hasQuit = True
