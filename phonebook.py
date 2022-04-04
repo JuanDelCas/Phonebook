@@ -16,7 +16,7 @@ phonebook = {}
 while not(hasQuit):
     print (menu)
 
-    selected_option = input("What do you want to do (1-5)?")
+    selected_option = input("what do you want to do (1-5)?")
 
     if selected_option == "2":
         name = input("What is the contact's name?")
@@ -25,7 +25,7 @@ while not(hasQuit):
         print("Contact added succesfully!")
 
     elif selected_option == "1":
-        name = input("What contact's number would you like?")
+        name = input("What contact's number would you like")
         print("Here's their number:", phonebook[name])
     
     elif selected_option == "3":
