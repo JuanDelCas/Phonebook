@@ -9,8 +9,8 @@ Electronic Phone Book
 3. Delete an entry
 4. List all entries
 5. Quit
-
 """
+
 phonebook = {}
 
 while not(hasQuit):
@@ -23,8 +23,11 @@ while not(hasQuit):
         phone_number = input("what is their number?")
         phonebook[name] = phone_number
         print("Contact added succesfully!")
+
     elif selected_option == "1":
         name = input("what contact's number would you like?")
         print("Here's their number:", phonebook[name])
+
     elif selected_option == "5":
         hasQuit = True
+        
